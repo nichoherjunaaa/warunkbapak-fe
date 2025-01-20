@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/:path(.*)",
-            "destination": "server-gunshop.vercel.app/api/:path"
+            "destination": "https://server-gunshop.vercel.app/api/:path"
         },
         {
             "source": "/(.*)",

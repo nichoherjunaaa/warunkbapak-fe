@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'server-gunshop.vercel.app/',
+        target: 'https://server-gunshop.vercel.app/',
         changeOrigin: true,
       },
     },
