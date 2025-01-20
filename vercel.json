@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/:path(.*)",
-            "destination": "https://server-zeta-five-42.vercel.app/:path"
+            "destination": "server-gunshop.vercel.app/:path"
         },
         {
             "source": "/(.*)",

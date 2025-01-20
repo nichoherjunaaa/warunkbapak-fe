@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://server-zeta-five-42.vercel.app/',
+        target: 'server-gunshop.vercel.app/',
         changeOrigin: true,
       },
     },
