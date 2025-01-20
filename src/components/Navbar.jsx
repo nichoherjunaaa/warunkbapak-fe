@@ -6,17 +6,24 @@ import { FaBarsStaggered } from 'react-icons/fa6'
 import { useSelector, useDispatch } from 'react-redux'
 import API from '../api'
 import { logoutUser } from '../features/userSlice'
+import { clearCartItem } from '../features/cartSlice'
 
 const Navbar = () => {
     const user = useSelector(state => state.userState.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const countCart = useSelector(state => state.cartState.numItemsInCart)
-    console.log(countCart);
     const handlingLogout = async () => {
-        await API.get('/auth/logout')
-        dispatch(logoutUser())
-        navigate('/')
+        try {
+            await API.get('/auth/logout')
+            dispatch(logoutUser())
+            dispatch(clearCartItem())
+            navigate('/')
+        } catch (error) {
+            dispatch(logoutUser())
+            dispatch(clearCartItem())
+            navigate('/')
+        }
     }
     return (
         <nav className="bg-base-200">
