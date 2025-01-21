@@ -24,11 +24,9 @@ const CartProduct = ({ item, user }) => {
             <div className="card bg-base-300 shadow-xl" key={item._id}>
                 <figure>
                     <div className="relative">
-
-
                         <img
                             src={item.image}
-                            alt="Shoes" />
+                            alt={item.name} />
                         {
                             item.stock < 1 && (
                                 <span className="absolute top-0 right-0 bg-error text-xl rounded-md font-bold p-2">Sold Out</span>

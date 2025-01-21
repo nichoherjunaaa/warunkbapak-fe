@@ -11,7 +11,7 @@ const PublicLayout = () => {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <Navbar />
             {isPageLoading ? (
                 <Loading key="loading" />

@@ -18,7 +18,7 @@ export const loader = (store) => async () => {
 }
 
 const CreateProductView = () => {
-    const categories = ["Sepatu", "Baju", "Kemeja", "Celana"]
+    const categories = ["Makanan", "Minuman", "Pakaian", "Aksesoris"]
     const navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault()

@@ -34,7 +34,7 @@ const ProductView = () => {
                     <Link className="btn btn-secondary" to='/product/create'>Tambah Product</Link>
                 </div>
             )}
-            <h3 className="text-lg text-primary font-bold text-right my-3">Jumlah Product : {pagination.totalProduct} Products</h3>
+            {/* <h3 className="text-lg text-primary font-bold text-right my-3">Jumlah Product : {pagination.totalProduct} Products</h3> */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                 {!products.length ? (
                     <div className="col-span-full flex justify-center items-center mt-5">

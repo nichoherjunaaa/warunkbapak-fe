@@ -23,7 +23,7 @@ const EditProductView = () => {
     const [product, setProduct] = useState(null)
     const { id } = useParams()
     const navigate = useNavigate()
-    const categories = ["Sepatu", "Baju", "Kemeja", "Celana"]
+    const categories = ["Makanan", "Minuman", "Pakaian", "Aksesoris"]
     const getProductId = async () => {
         try {
             const { data } = await API.get(`/product/detail/${id}`)
