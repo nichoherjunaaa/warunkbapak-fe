@@ -1,7 +1,7 @@
 import API from "../api"
 import { useLoaderData, Link } from 'react-router-dom'
 import Filter from "../components/Filter"
-import CartProduct from "../components/CartProduct"
+import CartProduct from "../components/CardProduct"
 import Pagination from "../components/Pagination"
 import { useSelector } from 'react-redux'
 
@@ -25,7 +25,6 @@ export const loader = async ({ request }) => {
 const ProductView = () => {
     const { products, pagination } = useLoaderData()
     const user = useSelector((state) => (state.userState.user))
-    console.log(user);
     return (
         <>
             <Filter />

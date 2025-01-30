@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import API from '../api'
 import { logoutUser } from '../features/userSlice'
 import { clearCartItem } from '../features/cartSlice'
-import Logo from '../assets/logo.png'
 
 const Navbar = () => {
     const user = useSelector(state => state.userState.user)
@@ -33,14 +32,18 @@ const Navbar = () => {
                     {/* <div className="hidden lg:flex text-md items-center">
                         <img src={Logo} alt="Logo" className="h-12 w-12" />
                     </div> */}
-                    <div className="dropdown">
+                    <div className="dropdown relative">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <FaBarsStaggered className="h6 w-6" />
+                            <FaBarsStaggered className="h-6 w-6" />
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content absolute mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52 left-0"
+                        >
                             <NavList />
                         </ul>
                     </div>
+
                     {/* Dekstop */}
                     <div className="hidden lg:flex">
                         <ul className="menu menu-horizontal">

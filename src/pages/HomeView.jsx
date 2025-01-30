@@ -1,5 +1,5 @@
 import API from '../api'
-import CartProduct from '../components/CartProduct'
+import CartProduct from '../components/CardProduct'
 import { useLoaderData } from 'react-router-dom'
 import Hero from '../components/Hero'
 import {useSelector} from 'react-redux'

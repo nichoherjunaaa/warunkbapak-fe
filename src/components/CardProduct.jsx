@@ -23,10 +23,12 @@ const CartProduct = ({ item, user }) => {
         <>
             <div className="card bg-base-300 shadow-xl" key={item._id}>
                 <figure>
-                    <div className="relative">
+                    <div className="relative aspect-square">
                         <img
                             src={item.image}
-                            alt={item.name} />
+                            alt={item.name}
+                            className="w-full h-full object-cover"
+                        />
                         {
                             item.stock < 1 && (
                                 <span className="absolute top-0 right-0 bg-error text-xl rounded-md font-bold p-2">Sold Out</span>
@@ -38,16 +40,25 @@ const CartProduct = ({ item, user }) => {
                     {user && user.role === "owner" && (
                         <div className="flex justify-end gap-x-3">
                             <FaTrash onClick={handleDelete} className="text-red-500 cursor-pointer" />
-                            <Link to={`/product/${item._id}/edit`}><FaPencilAlt className="text-info cursor-pointer" /></Link>
+                            <Link to={`/product/${item._id}/edit`}>
+                                <FaPencilAlt className="text-info cursor-pointer" />
+                            </Link>
                         </div>
                     )}
-                    <h2 className="card-title text-primary">{item.name}</h2>
-                    <p className="font-bold text-accent">{formatHarga(item.price)}</p>
-                    <p>{item.description.substring(0, 50)}</p>
-                    <div className="card-actions justify-end">
-                        <Link to={`/product/detail/${item._id}`} className="btn btn-primary">Buy Now</Link>
+                    <h2 className="card-title text-pretty text-xs font-extrabold lg:text-2xl">{item.name}</h2>
+                    <p className="font-bold text-pretty text-xs lg:text-xl">{formatHarga(item.price)}</p>
+                    <p className="text-xs lg:text-lg hidden lg:block">
+                        {item.description.length > 50
+                            ? `${item.description.substring(0, 50)}...`
+                            : item.description}
+                    </p>
+                    <div className="card-actions justify-center lg:justify-end mt-5 items-center">
+                        <Link to={`/product/detail/${item._id}`} className="btn btn-primary btn-xs lg:btn-md p-4 flex justify-center items-center text-center pb-6">
+                            Lihat Produk
+                        </Link>
                     </div>
                 </div>
+
             </div>
         </>
     )

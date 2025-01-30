@@ -26,7 +26,7 @@ const cartSlice = createSlice({
             state.numItemsInCart += product.amount
             state.cartTotal += product.price * product.amount
             localStorage.setItem('cart', JSON.stringify(state))
-            toast.success('Produk berhasil ditambahkan ke keranjang')
+            toast.success('Produk ditambahkan ke keranjang')
         },
         editItem: (state, action) => {
             const { cartId, amount } = action.payload

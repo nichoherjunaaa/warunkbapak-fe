@@ -3,7 +3,7 @@ import React from 'react'
 const Loading = () => {
     return (
         <div className="h-screen flex justify-center items-center">
-            <span className="loading loading-infinity loading-lg"></span>
+            <span class="loading loading-spinner loading-lg"></span>
         </div>
     )
 }
