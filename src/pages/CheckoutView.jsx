@@ -95,7 +95,7 @@ const CheckoutView = () => {
     return (
         <>
             <div className="border-b border-primary pb-5 mt-5">
-                <h2 className="text-2xl font-bold capitalize">Checkout Products</h2>
+                <h2 className="text-2xl font-bold capitalize">Checkout</h2>
             </div>
             <div className="mt-8 grid gap-y-8 gap-x-2 lg:grid-cols-12">
                 <div className="lg:col-span-8">

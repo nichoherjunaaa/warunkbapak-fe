@@ -35,8 +35,8 @@ const OrderView = () => {
                 <thead>
                     <tr>
                         <td>No</td>
-                        <td>Order by</td>
-                        <td>Products</td>
+                        <td>Penerima</td>
+                        <td>Produk</td>
                         <td>Total</td>
                         <td>Status Pembayaran</td>
                         <th></th>

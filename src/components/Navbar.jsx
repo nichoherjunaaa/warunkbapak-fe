@@ -27,14 +27,14 @@ const Navbar = () => {
     }
     return (
         <nav className="bg-base-200">
-            <div className="navbar mx-auto max-w-8xl px-8">
+            <div className="navbar mx-auto max-w-8xl px-3 lg:px-8">
                 <div className="navbar-start">
                     {/* <div className="hidden lg:flex text-md items-center">
                         <img src={Logo} alt="Logo" className="h-12 w-12" />
                     </div> */}
                     <div className="dropdown relative">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <FaBarsStaggered className="h-6 w-6" />
+                            <FaBarsStaggered className="h-5 w-5" />
                         </label>
                         <ul
                             tabIndex={0}
@@ -62,7 +62,7 @@ const Navbar = () => {
                         </div>
                     </NavLink>
                     {user && (
-                        <button className="btn btn-error btn-outline btn-md" onClick={handlingLogout}>Logout</button>
+                        <button className="btn btn-error lg:btn-md btn-md text-xs lg:text-md" onClick={handlingLogout}>Logout</button>
                     )}
                 </div>
             </div>
