@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/:path(.*)",
-            "destination": "https://warungbapak-server.vercel.app/api/:path"
+            "destination": "https://warunkbapak-be.vercel.app/api/:path"
         },
         {
             "source": "/(.*)",
