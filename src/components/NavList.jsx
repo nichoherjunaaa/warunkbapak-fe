@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const links = [
-    { id: 1, url: '', text: "home" },
+    { id: 1, url: '', text: "Beranda" },
     { id: 2, url: 'products', text: "produk" },
     { id: 3, url: 'orders', text: "pesanan" },
     { id: 4, url: 'checkout', text: "checkout" },

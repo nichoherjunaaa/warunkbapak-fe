@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
 import FormInput from './Form/FormInput';
 import FormSelect from './Form/FormSelect';
-import { HiRefresh } from 'react-icons/hi';
 import { IoFilter } from "react-icons/io5";
 
 const Filter = () => {
@@ -12,19 +11,21 @@ const Filter = () => {
     const [showFilters, setShowFilters] = useState(false);
 
     return (
-        <div className="bg-base-200 rounded-r-md flex flex-col px-10 py-5">
-            <Form method="get" className="w-full mb-7">
-                <div className="flex w-full items-center gap-2">
-                    <FormInput
-                        label="Cari Produk"
-                        type="search"
-                        name="name"
-                        defaultValue={name}
-                    />
-                    <button type="submit" className="btn btn-primary mt-9 w-24">Cari</button>
-                    <button 
-                        type="button" 
-                        className="btn btn-secondary mt-9" 
+        <div className="bg-base-200 rounded-md p-4 sm:p-6 w-full mx-auto">
+            <Form method="get" className="w-full mb-4">
+                <div className="flex flex-wrap items-center gap-2">
+                    <div className="flex-grow">
+                        <FormInput
+                            label="Cari Produk"
+                            type="search"
+                            name="name"
+                            defaultValue={name}
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary w-full sm:w-auto  lg:mt-9">Cari</button>
+                    <button
+                        type="button"
+                        className="btn btn-secondary w-full sm:w-auto lg:mt-9"
                         onClick={() => setShowFilters(!showFilters)}
                     >
                         <IoFilter />
@@ -38,19 +39,7 @@ const Filter = () => {
                             name="category"
                             defaultValue={category}
                         />
-                        {/* <FormInput
-                            label="Min Price"
-                            type="number"
-                            name="minPrice"
-                            defaultValue=""
-                        />
-                        <FormInput
-                            label="Max Price"
-                            type="number"
-                            name="maxPrice"
-                            defaultValue=""
-                        /> */}
-                        <button type="submit" className="btn btn-success mt-3">Apply Filters</button>
+                        <button type="submit" className="btn btn-success mt-3 w-full sm:w-auto">Apply Filters</button>
                     </div>
                 )}
             </Form>
