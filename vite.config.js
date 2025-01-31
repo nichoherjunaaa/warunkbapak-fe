@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://warungbapak-server.vercel.app/',
+        target: 'https://warunkbapak-be.vercel.app/',
         changeOrigin: true,
       },
     },
